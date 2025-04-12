@@ -27,6 +27,7 @@ class KelasResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('Kelas')
                     ->required()
+                    ->unique(ignoreRecord: true)
                     ->maxLength(255)
                     ->label('Nama Kelas'),
             ]);
